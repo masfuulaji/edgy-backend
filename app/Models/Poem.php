@@ -17,12 +17,6 @@ class Poem extends Model
         'content',
     ];
 
-
     public $keyType = 'uuid';
     public $incrementing = false;
-
-    public function student()
-    {
-        return $this->belongsTo(Student::class);
-    }
 }

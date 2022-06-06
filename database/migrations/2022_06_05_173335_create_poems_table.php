@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('poems', function (Blueprint $table) {
             $table->uuid('id')->unique();
+            $table->char('user_id', 32);
             $table->string('title');
             $table->string('slug');
             $table->string('content');
+            $table->date('date');
             $table->timestamps();
             $table->softDeletes();
         });
